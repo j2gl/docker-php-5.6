@@ -1,5 +1,5 @@
 IMAGE_NAME=php-5.6-fpm
-VERSION=1.0.0
+VERSION=1.0.1
 CONTAINER_NAME=php-5.6
 
 build:
