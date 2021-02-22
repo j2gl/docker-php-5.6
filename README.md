@@ -1,13 +1,14 @@
 # docker PHP 5.6
 
-This is a docker php 5.6 image to run old code using.   I needed to run an old code developed in php 5.6.  
+This is a docker php 5.6 image to run old code since version 5.6 is deprecated long time ago.  
+My motivation was I needed to run an old code developed in php 5.6.
 It is meant to be used as FPM (FastCGI Process Manager).
 
 Docker Repository: https://hub.docker.com/repository/docker/j2gl/php-5.6-fpm
 
 ## Running
 
-You can check the [sample](sample-compose/docker-compose.yml)
+You can check the dokcer-compose [sample](sample-compose/docker-compose.yml) to learn how to use it.
 
 
 ```sh
