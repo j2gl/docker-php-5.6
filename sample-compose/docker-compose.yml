@@ -1,0 +1,46 @@
+version: '3.1'
+
+services:
+
+  old-php-56-mysql:
+    container_name: old-php-56-mysql
+    image: mysql:5.7.33
+    ports: 
+      - "23306:3306"
+    volumes:
+      - "./config/mysql-custom.cnf:/etc/mysql/conf.d/mysql-custom.cnf"
+      - "./dbdata:/var/lib/mysql"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    restart: "no"
+    networks: 
+      - old-php-56-net
+
+  old-php-56:
+    container_name: old-php-56
+    image: j2gl/php-5.6-fpm:latest
+    ports:
+      - "9000:9000"
+    volumes:
+      - "./src:/php-scripts"
+    links:
+      - "old-php-56-mysql"
+    restart: "no"
+    networks: 
+      - old-php-56-net
+
+  old-php-56-nginx:
+    container_name: old-php-56-nginx
+    build: 
+      context: "./old-php-56-nginx"
+    ports: 
+      - "80:80"
+    volumes:
+      - "./src:/usr/share/nginx/html"
+    depends_on:
+      - old-php-56
+    networks: 
+      - old-php-56-net
+   
+networks:
+  old-php-56-net:

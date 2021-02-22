@@ -16,3 +16,7 @@ stop:
 
 remove:
 	docker rmi ${IMAGE_NAME}
+
+latest:
+	docker tag j2gl/${IMAGE_NAME}:${VERSION} j2gl/${IMAGE_NAME}:latest
+	docker push j2gl/${IMAGE_NAME}:latest

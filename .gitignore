@@ -1,0 +1,28 @@
+# Common files by operating systems
+.DS_Store
+.Spotlight-V100
+.Trashes
+.gradle
+ehthumbs.db
+Thumbs.db
+
+# Eclipse and IntelliJ
+.classpath
+.project
+.settings
+.idea
+.metadata
+*.iml
+*.ipr
+
+# Executable and other compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Project specific
+temp/
+sample-compose/dbdata

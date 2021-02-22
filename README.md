@@ -5,6 +5,20 @@ It is meant to be used as FPM (FastCGI Process Manager).
 
 Docker Repository: https://hub.docker.com/repository/docker/j2gl/php-5.6-fpm
 
-## Installing
+## Running
 
-TODO
+You can check the [sample](sample-compose/docker-compose.yml)
+
+
+```sh
+cd sample-compose
+docker-compose up -d
+docker-compose logs -f
+```
+
+Then go to http://localhost
+
+To connnect to the database 
+```sh
+mysql -h 127.0.0.1 --port=23306 -u root -pphpdbsecret
+```
