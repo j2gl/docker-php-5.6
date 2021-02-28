@@ -1,25 +1,29 @@
-# docker PHP 5.6
+# docker php 5.6
 
-This is a docker php 5.6 image to run old code since version 5.6 is deprecated long time ago.  
-My motivation was that I needed to run code developed in php 5.6.
-It is meant to be used as FPM (FastCGI Process Manager) and tested with nginx.
+A long time ago php 5.6 version was deprecated.  This is a docker image 
+meant to run old php code in a container.  It is tested with nginx connected
+through FPM (FastCGI Process Manager) and [nginx](https://nginx.org/en/).
 
-Docker Repository: https://hub.docker.com/repository/docker/j2gl/php-5.6-fpm
+My motivation was that I needed to run code developed in this old php 5.6 
+version.  This docker image is meant to 
+
+Please check the Image Repository in [Docker Hub](https://hub.docker.com/repository/docker/j2gl/php-5.6-fpm).
 
 ## Running
 
-Just follow this steps:
+To demonstarte how to use it, follow these steps:
 
-On a terminal window run:
+1. Clone this repository
+2. Open a terminal window and run.
 ```sh
 cd sample-compose
 docker-compose up -d
 docker-compose logs -f
 ```
+3. Open your browser and go to http://localhost
 
-Open your browser and go to http://localhost
-
-Then you can check the dokcer-compose [sample](sample-compose/docker-compose.yml) to learn how to use it.
+Check the dokcer-compose [sample](sample-compose/docker-compose.yml) 
+to customize it to your own needs and learn how to use it.
 
 **Database**
 To connect to the database 
