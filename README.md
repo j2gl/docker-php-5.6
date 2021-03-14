@@ -30,3 +30,7 @@ To connect to the database
 ```sh
 mysql -h 127.0.0.1 --port=23306 -u root -pphpdbsecret
 ```
+
+## TODO
+
+[ ] Add debug support with Xdebug 2.5.5 - See the repo with tag [XDEBUG_2_5_5](https://github.com/xdebug/xdebug/tree/XDEBUG_2_5_5)
